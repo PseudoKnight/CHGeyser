@@ -165,4 +165,27 @@ public class Functions {
 			return new CString(connection.bedrockUsername(), t);
 		}
 	}
+
+	@api
+	public static class geyser_username_prefix extends GeyserFunction {
+		@Override
+		public String getName() {
+			return "geyser_username_prefix";
+		}
+
+		@Override
+		public String docs() {
+			return "string {} Returns the username prefix defined in floodgate config, or null if one does not exist.";
+		}
+
+		@Override
+		public Integer[] numArgs() {
+			return new Integer[]{0};
+		}
+
+		@Override
+		public Mixed exec(Target t, Environment environment, Mixed... args) throws ConfigRuntimeException {
+			return new CString(GeyserApi.api().usernamePrefix(), t);
+		}
+	}
 }

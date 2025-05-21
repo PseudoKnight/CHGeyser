@@ -10,7 +10,7 @@ import com.laytonsmith.core.extensions.MSExtension;
 public class CHGeyser extends AbstractExtension {
 
 	public Version getVersion() {
-		return new SimpleVersion(1,0,0);
+		return new SimpleVersion(1,1,0);
 	}
 
 	@Override
